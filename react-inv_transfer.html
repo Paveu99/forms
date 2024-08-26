@@ -1,0 +1,244 @@
+<html lang="en">
+
+<head>
+    <script type="module">import { injectIntoGlobalHook } from "/@react-refresh";
+        injectIntoGlobalHook(window);
+        window.$RefreshReg$ = () => { };
+        window.$RefreshSig$ = () => (type) => type;</script>
+
+    <script type="module" src="/@vite/client"></script>
+
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/vite.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction App</title>
+    <style type="text/css" data-vite-dev-id="C:/Users/W11/Desktop/UBS web app/react-inv/banking-app-front/src/App.css">
+        #root {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .App {
+            width: 1200px;
+        }
+
+        .record-li {
+            background-color: black;
+            border-radius: 10px;
+            padding: 5px 10px;
+        }
+
+        .record-li:hover {
+            cursor: pointer;
+        }
+
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ddd;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            color: black;
+        }
+
+        input,
+        select {
+            margin-bottom: 15px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 100%;
+        }
+
+        option {
+            padding: 15px;
+        }
+
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
+
+        tr:hover {
+            cursor: pointer;
+            background-color: rgba(120, 120, 120, 1);
+        }
+
+        th:hover {
+            cursor: auto;
+        }
+
+        .checkAnswer {
+            padding: 10px;
+            border-radius: 10px;
+            width: max-content;
+        }
+    </style>
+    <style type="text/css"
+        data-vite-dev-id="C:/Users/W11/Desktop/UBS web app/react-inv/banking-app-front/src/styles/LogReg.css">
+        .form-logreg {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 300px;
+            gap: 10px
+        }
+
+        .LogReg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container-input {
+            width: 100%;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        .password-container {
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .password-container input {
+            margin-left: 30px;
+            margin-right: 10px;
+            width: 60%;
+            padding-right: 2em;
+        }
+
+        .show-password-button {
+            cursor: pointer;
+            padding: 5px 10px;
+        }
+    </style>
+    <style type="text/css"
+        data-vite-dev-id="C:/Users/W11/Desktop/UBS web app/react-inv/banking-app-front/src/index.css">
+        :root {
+            font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+            line-height: 1.5;
+            font-weight: 400;
+
+            color-scheme: light dark;
+            color: rgba(255, 255, 255, 0.87);
+            background-color: #242424;
+
+            font-synthesis: none;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        a {
+            font-weight: 500;
+            color: #646cff;
+            text-decoration: inherit;
+        }
+
+        a:hover {
+            color: #000dff;
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            min-width: 320px;
+            min-height: 100vh;
+        }
+
+        h1 {
+            font-size: 3.2em;
+            line-height: 1.1;
+        }
+
+        button {
+            border-radius: 8px;
+            border: 1px solid transparent;
+            padding: 0.6em 1.2em;
+            font-size: 1em;
+            font-weight: 500;
+            font-family: inherit;
+            background-color: #1a1a1a;
+            cursor: pointer;
+            transition: border-color 0.25s;
+        }
+
+        button:hover {
+            border-color: #000dff;
+        }
+
+        button:focus,
+        button:focus-visible {
+            outline: 4px auto -webkit-focus-ring-color;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root">
+        <div class="App">
+            <header>
+                <div style="display: flex; justify-content: space-between;">
+                    <h1>Transaction App</h1>
+                    <div>
+                        <div style="display: flex; justify-content: flex-end; gap: 5px;"><b>Current balance:
+                                828$</b>|<b>user1</b>|<b><a class="link" href="/user/logout"
+                                    style="text-decoration: none;">Log out</a></b></div>
+                    </div>
+                </div>
+                <hr>
+                <div><a class="" href="/" style="padding: 5px 100px;">Transfer App</a><a class=""
+                        href="/transfer/history" style="padding: 5px 100px;">Transfers History</a><a class="active"
+                        href="/transfer/add" aria-current="page"
+                        style="padding: 5px 150px; color: rgb(166, 27, 25); background-color: rgb(255, 255, 255); border-radius: 15px;">Transfer
+                        Money</a></div>
+                <hr>
+            </header>
+            <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <h2>Transfer money between two users:</h2>
+                <form><select class="select-user" name="recipient">
+                        <option value="">Select a user to send money to...</option>
+                        <option value="2">user2</option>
+                        <option value="3">user3</option>
+                        <option value="4">user4</option>
+                        <option value="5">user5</option>
+                        <option value="78d9355c-4759-4fb0-8a76-22a7fc3c129f">user7</option>
+                        <option value="543f3b36-4c4a-433d-a692-2d6083305ebe">user6</option>
+                        <option value="89d7f297-d358-4c38-bc32-ae343fc1e528">test123</option>
+                        <option value="12194993-115d-4c8a-897e-aa5ed31dbd15">test234</option>
+                    </select><input type="number" name="amount" class="amount-input" value="0"
+                        style="width: 1182.67px;"><button class="submit-transfer">Submit</button></form>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,182 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction tracker</title>
+    <link rel="stylesheet" href="../src/styles/styles.css">
+    <script defer="" src="bundje.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #16242b;
+            color: white;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        input {
+            margin-right: 10px;
+            padding: 5px 5px 5px 10px;
+            border-radius: 10px;
+            border: none 0px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        a {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: 0.3s ease;
+        }
+
+        a:hover {
+            background-color: grey;
+        }
+
+        #loginLink {
+            background-color: green;
+        }
+
+        #logoutLink {
+            background-color: red;
+        }
+
+        #username {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: yellow;
+            color: black;
+            width: max-content;
+            border-radius: 10px;
+            position: absolute;
+            right: 10px;
+            top: -10px;
+        }
+
+        #amount {
+            color: black;
+            width: 45%;
+        }
+
+        #date {
+            color: black;
+            width: 45%;
+        }
+
+        #remove {
+            color: black;
+            width: 10%;
+        }
+
+        button {
+            padding: 10px 15px 10px 15px;
+            border-radius: 10px;
+            border: none;
+            background-color: aquamarine;
+            font-weight: 600;
+        }
+
+        button:hover {
+            cursor: pointer;
+            background-color: aqua;
+        }
+
+        #remove-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9zdHlsZXMvc3R5bGVzLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLDhCQUE4QjtJQUM5QixZQUFZO0lBQ1oseUJBQXlCO0lBQ3pCLFlBQVk7QUFDaEI7O0FBRUE7SUFDSSxtQkFBbUI7QUFDdkI7O0FBRUE7SUFDSSxrQkFBa0I7SUFDbEIseUJBQXlCO0lBQ3pCLG1CQUFtQjtJQUNuQixnQkFBZ0I7QUFDcEI7O0FBRUE7SUFDSSxXQUFXO0lBQ1gseUJBQXlCO0FBQzdCOztBQUVBO0lBQ0ksdUJBQXVCO0lBQ3ZCLFlBQVk7QUFDaEI7O0FBRUE7SUFDSSxzQkFBc0I7SUFDdEIsWUFBWTtBQUNoQjs7QUFFQTtJQUNJLHlCQUF5QjtBQUM3Qjs7QUFFQTtJQUNJLHVCQUF1QjtJQUN2QixZQUFZO0lBQ1osYUFBYTtJQUNiLHFCQUFxQjtJQUNyQixtQkFBbUI7SUFDbkIscUJBQXFCO0FBQ3pCOztBQUVBO0lBQ0ksc0JBQXNCO0FBQzFCOztBQUVBO0lBQ0ksdUJBQXVCO0FBQzNCOztBQUVBO0lBQ0kscUJBQXFCO0FBQ3pCOztBQUVBO0lBQ0ksZ0JBQWdCO0lBQ2hCLGFBQWE7SUFDYix3QkFBd0I7SUFDeEIsWUFBWTtJQUNaLGtCQUFrQjtJQUNsQixtQkFBbUI7SUFDbkIsa0JBQWtCO0lBQ2xCLFdBQVc7SUFDWCxVQUFVO0FBQ2Q7O0FBRUE7SUFDSSxZQUFZO0lBQ1osVUFBVTtBQUNkOztBQUVBO0lBQ0ksWUFBWTtJQUNaLFVBQVU7QUFDZDs7QUFFQTtJQUNJLFlBQVk7SUFDWixVQUFVO0FBQ2Q7O0FBRUE7SUFDSSw0QkFBNEI7SUFDNUIsbUJBQW1CO0lBQ25CLFlBQVk7SUFDWiw0QkFBNEI7SUFDNUIsZ0JBQWdCO0FBQ3BCOztBQUVBO0lBQ0ksZUFBZTtJQUNmLHNCQUFzQjtBQUMxQjs7QUFFQTtJQUNJLGFBQWE7SUFDYix1QkFBdUI7SUFDdkIsbUJBQW1CO0FBQ3ZCIiwic291cmNlc0NvbnRlbnQiOlsiYm9keSB7XHJcbiAgICBmb250LWZhbWlseTogQXJpYWwsIHNhbnMtc2VyaWY7XHJcbiAgICBtYXJnaW46IDIwcHg7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMTYyNDJiO1xyXG4gICAgY29sb3I6IHdoaXRlO1xyXG59XHJcblxyXG5mb3JtIHtcclxuICAgIG1hcmdpbi1ib3R0b206IDIwcHg7XHJcbn1cclxuXHJcbmlucHV0IHtcclxuICAgIG1hcmdpbi1yaWdodDogMTBweDtcclxuICAgIHBhZGRpbmc6IDVweCA1cHggNXB4IDEwcHg7XHJcbiAgICBib3JkZXItcmFkaXVzOiAxMHB4O1xyXG4gICAgYm9yZGVyOiBub25lIDBweDtcclxufVxyXG5cclxudGFibGUge1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBib3JkZXItY29sbGFwc2U6IGNvbGxhcHNlO1xyXG59XHJcblxyXG50aCB7XHJcbiAgICBib3JkZXI6IDFweCBzb2xpZCBibGFjaztcclxuICAgIHBhZGRpbmc6IDhweDtcclxufVxyXG5cclxudGQge1xyXG4gICAgYm9yZGVyOiAxcHggc29saWQgI2RkZDtcclxuICAgIHBhZGRpbmc6IDhweDtcclxufVxyXG5cclxudGgge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2YyZjJmMjtcclxufVxyXG5cclxuYSB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiBibGFjaztcclxuICAgIGNvbG9yOiB3aGl0ZTtcclxuICAgIHBhZGRpbmc6IDEwcHg7XHJcbiAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XHJcbiAgICBib3JkZXItcmFkaXVzOiAxMHB4O1xyXG4gICAgdHJhbnNpdGlvbjogMC4zcyBlYXNlO1xyXG59XHJcblxyXG5hOmhvdmVyIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IGdyZXk7XHJcbn1cclxuXHJcbiNsb2dpbkxpbmsge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogZ3JlZW47XHJcbn1cclxuXHJcbiNsb2dvdXRMaW5rIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHJlZDtcclxufVxyXG5cclxuI3VzZXJuYW1lIHtcclxuICAgIG1hcmdpbi10b3A6IDIwcHg7XHJcbiAgICBwYWRkaW5nOiAxMHB4O1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogeWVsbG93O1xyXG4gICAgY29sb3I6IGJsYWNrO1xyXG4gICAgd2lkdGg6IG1heC1jb250ZW50O1xyXG4gICAgYm9yZGVyLXJhZGl1czogMTBweDtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIHJpZ2h0OiAxMHB4O1xyXG4gICAgdG9wOiAtMTBweDtcclxufVxyXG5cclxuI2Ftb3VudCB7XHJcbiAgICBjb2xvcjogYmxhY2s7XHJcbiAgICB3aWR0aDogNDUlO1xyXG59XHJcblxyXG4jZGF0ZSB7XHJcbiAgICBjb2xvcjogYmxhY2s7XHJcbiAgICB3aWR0aDogNDUlO1xyXG59XHJcblxyXG4jcmVtb3ZlIHtcclxuICAgIGNvbG9yOiBibGFjaztcclxuICAgIHdpZHRoOiAxMCU7XHJcbn1cclxuXHJcbmJ1dHRvbiB7XHJcbiAgICBwYWRkaW5nOiAxMHB4IDE1cHggMTBweCAxNXB4O1xyXG4gICAgYm9yZGVyLXJhZGl1czogMTBweDtcclxuICAgIGJvcmRlcjogbm9uZTtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IGFxdWFtYXJpbmU7XHJcbiAgICBmb250LXdlaWdodDogNjAwO1xyXG59XHJcblxyXG5idXR0b246aG92ZXIge1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogYXF1YTtcclxufVxyXG5cclxuI3JlbW92ZS1jb250YWluZXIge1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxufSJdLCJzb3VyY2VSb290IjoiIn0= */
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <header>
+            <a href="/" id="homeLink">Home</a>
+
+            <a href="/history" id="historyLink">History</a>
+            <a href="/add" id="addLink">Add Transaction</a>
+            <a href="#" id="logoutLink">Logout</a>
+            <p id="username">Username: John</p>
+
+        </header>
+    </div>
+    <div id="app">
+        <h1>Transaction History</h1>
+        <form id="filterForm">
+            <input type="date" name="date" placeholder="Filter by Date">
+            <input type="number" name="amount" placeholder="Filter by Amount">
+            <button type="submit">Filter</button>
+        </form>
+        <table id="transactionsTable">
+            <thead>
+                <tr>
+                    <th id="date">Date</th>
+                    <th id="amount">Amount</th>
+                    <th id="remove">Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-id="aaaa">
+                    <td>2024-07-21</td>
+                    <td>10000</td>
+                    <td id="remove-container"><button class="remove-btn">Remove</button></td>
+                </tr>
+
+                <tr data-id="bbbb">
+                    <td>2024-07-20</td>
+                    <td>20</td>
+                    <td id="remove-container"><button class="remove-btn">Remove</button></td>
+                </tr>
+
+                <tr data-id="cccc">
+                    <td>2024-07-15</td>
+                    <td>15000</td>
+                    <td id="remove-container"><button class="remove-btn">Remove</button></td>
+                </tr>
+
+                <tr data-id="d73f">
+                    <td>2024-07-30</td>
+                    <td>-1000</td>
+                    <td id="remove-container"><button class="remove-btn">Remove</button></td>
+                </tr>
+
+                <tr data-id="eda5">
+                    <td>123213-03-12</td>
+                    <td>12345</td>
+                    <td id="remove-container"><button class="remove-btn">Remove</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+</body>
+
+</html>

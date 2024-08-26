@@ -1,0 +1,194 @@
+<html lang="en">
+
+<head>
+    <script type="module">import { injectIntoGlobalHook } from "/@react-refresh";
+        injectIntoGlobalHook(window);
+        window.$RefreshReg$ = () => { };
+        window.$RefreshSig$ = () => (type) => type;</script>
+
+    <script type="module" src="/@vite/client"></script>
+
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/vite.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment app</title>
+    <style type="text/css"
+        data-vite-dev-id="C:/Users/W11/Desktop/UBS web app/react+express/investment-portfolio-front/src/App.css">
+        #root {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .App {
+            width: 1200px;
+        }
+
+        .record-li {
+            background-color: black;
+            border-radius: 10px;
+            padding: 5px 10px;
+        }
+
+        .record-li:hover {
+            cursor: pointer;
+        }
+    </style>
+    <style type="text/css"
+        data-vite-dev-id="C:/Users/W11/Desktop/UBS web app/react+express/investment-portfolio-front/src/styles/LogReg.css">
+        .form-logreg {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 300px;
+            gap: 10px
+        }
+
+        .LogReg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container-input {
+            width: 100%;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        .password-container {
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .password-container input {
+            margin-left: 30px;
+            margin-right: 10px;
+            width: 60%;
+            padding-right: 2em;
+        }
+
+        .show-password-button {
+            cursor: pointer;
+            padding: 5px 10px;
+        }
+    </style>
+    <style type="text/css"
+        data-vite-dev-id="C:/Users/W11/Desktop/UBS web app/react+express/investment-portfolio-front/src/styles/EditForm.css">
+        .edit-form {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+    </style>
+    <style type="text/css"
+        data-vite-dev-id="C:/Users/W11/Desktop/UBS web app/react+express/investment-portfolio-front/src/index.css">
+        :root {
+            font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+            line-height: 1.5;
+            font-weight: 400;
+
+            color-scheme: light dark;
+            color: rgba(255, 255, 255, 0.87);
+            background-color: #242424;
+
+            font-synthesis: none;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        a {
+            font-weight: 500;
+            color: #646cff;
+            text-decoration: inherit;
+        }
+
+        a:hover {
+            color: #000dff;
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            min-width: 320px;
+            min-height: 100vh;
+        }
+
+        h1 {
+            font-size: 3.2em;
+            line-height: 1.1;
+        }
+
+        button {
+            border-radius: 8px;
+            border: 1px solid transparent;
+            padding: 0.6em 1.2em;
+            font-size: 1em;
+            font-weight: 500;
+            font-family: inherit;
+            background-color: #1a1a1a;
+            cursor: pointer;
+            transition: border-color 0.25s;
+        }
+
+        button:hover {
+            border-color: #000dff;
+        }
+
+        button:focus,
+        button:focus-visible {
+            outline: 4px auto -webkit-focus-ring-color;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root">
+        <div class="App">
+            <header>
+                <div style="display: flex; justify-content: space-between;">
+                    <h1>INVESTMENT APP</h1>
+                    <div>
+                        <div style="display: flex; gap: 10px;"><a class="" href="/user/login"
+                                style="text-decoration: none;">Log in</a>|<a class="active" href="/user/register"
+                                style="text-decoration: none;" aria-current="page">Register</a></div>
+                    </div>
+                </div>
+                <hr>
+                <div><a class="" href="/" style="padding: 5px 100px;">Main page</a></div>
+                <hr>
+            </header>
+            <div class="LogReg">
+                <h1>Register Form</h1>
+                <form autocomplete="off" class="form-logreg">
+                    <div class="container-input"><label>
+                            <p>Username:</p>
+                            <div class="password-container"><input type="text" name="email" class="input" value="">
+                            </div>
+                        </label></div>
+                    <div class="container-input"><label>
+                            <p>Password:</p>
+                            <div class="password-container"><input type="password" name="password" class="input"
+                                    value=""><button type="button" class="show-password-button">👁</button></div>
+                        </label></div>
+                    <div class="container-input"><label>
+                            <p>Balance to start with:</p>
+                            <div class="password-container"><input type="number" name="balance" class="input" value="0">
+                            </div>
+                        </label></div><button type="submit" class="download2">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="/src/main.tsx?t=1724662382535"></script>
+
+
+</body>
+
+</html>
